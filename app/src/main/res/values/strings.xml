@@ -3,4 +3,8 @@
     <string name="show_welcome">welcome to the yip shop</string>
     <string name="button_start">start shopping</string>
     <string name="instructions">instructions</string>
+    <string name="first">first</string>
+    <string name="second">second</string>
+    <string name="third">third</string>
+    <string name="yip_shop">yip shop</string>
 </resources>
