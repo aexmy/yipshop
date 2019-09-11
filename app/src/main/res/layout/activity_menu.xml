@@ -21,9 +21,11 @@
         android:textStyle="normal|bold|italic" />
 
     <ScrollView
+        android:id="@+id/scrollview_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/yipshop_title">
+        android:layout_below="@id/yipshop_title"
+        android:layout_above="@+id/button_checkout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +36,7 @@
                 android:id="@+id/first_item"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                app:cardBackgroundColor="#82B1FF">
+                app:cardBackgroundColor="#80D8FF">
 
                 <ImageView
                     android:id="@+id/first_image"
@@ -63,7 +65,7 @@
                 android:id="@+id/third_item"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                app:cardBackgroundColor="#FF8A80">
+                app:cardBackgroundColor="#FFD180">
 
                 <ImageView
                     android:id="@+id/third_image"
@@ -75,4 +77,17 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/button_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#8C9EFF"
+        android:text="@string/checkout"
+        android:textAllCaps="false"
+        android:textColor="#FFE57F"
+        android:textSize="26sp"
+        android:textStyle="bold|italic" />
+
 </RelativeLayout>
