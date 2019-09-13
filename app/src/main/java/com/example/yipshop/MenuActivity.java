@@ -22,4 +22,6 @@ public class MenuActivity extends AppCompatActivity {
 
         Log.d(LOG_TAG, "Button clicked!");
     }
+    //ViewGroup layout = ViewGroup(somethinghere);
+
 }
