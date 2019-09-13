@@ -8,4 +8,20 @@
     <string name="third">third</string>
     <string name="yip_shop">yip shop</string>
     <string name="checkout">checkout</string>
+    <string name="thankyou_message">ty_message</string>
+    <string name="subtotal">subtotal</string>
+    <string name="tps">tps</string>
+    <string name="tvq">tvq</string>
+    <string name="total">total</string>
+    <string name="thank_you_for_using_my_app">thank you for using my app!</string>
+    <string name="proceed_to_checkout">proceed_to_checkout</string>
+    <string name="proceed_checkout">proceed to checkout</string>
+    <string name="title1">title1</string>
+    <string name="dollar_sign">$</string>
+    <string name="price">0.00</string>
+    <string name="add">+</string>
+    <string name="remove">-</string>
+    <string name="somethingcute1">somethingcute1</string>
+    <string name="minus">minus</string>
+    <string name="minus2">−</string>
 </resources>

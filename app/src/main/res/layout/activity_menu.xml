@@ -31,6 +31,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <include layout="@layout/card1_content"/>
+            <include layout="@layout/card2_content"/>
+            <include layout="@layout/card3_content"/>
 
             <android.support.v7.widget.CardView
                 android:id="@+id/first_item"
@@ -84,7 +87,8 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:background="#8C9EFF"
-        android:text="@string/checkout"
+        android:onClick="launchCheckoutActivity"
+        android:text="@string/proceed_checkout"
         android:textAllCaps="false"
         android:textColor="#FFE57F"
         android:textSize="26sp"

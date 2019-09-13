@@ -46,7 +46,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/thankyou_message"
+        android:text="@string/thank_you_for_using_my_app"
         android:textColor="#84FFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/background"
