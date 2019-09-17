@@ -42,14 +42,13 @@
     <string name="backpacks">backpacks</string>
     <string name="qty">qty.</string>
     <string name="_0">0</string>
-    <string name="_1_23">1.23</string>
-    <string name="_2_34">2.34</string>
-    <string name="_3_45">3.45</string>
     <string name="bunny_squishies">bunny squishies</string>
     <string name="little_shoulder_bags">little shoulder bags</string>
     <string name="pink_flamingo_pouches">pink flamingo pouches</string>
     <string name="little_bunny_squishies">little_bunny_squishies</string>
     <string name="description22">little bunny squishies</string>
-    <string name="price">4.99</string>
     <string name="actual_subtotal">0.00</string>
+    <string name="price2">1.99</string>
+    <string name="price1">4.99</string>
+    <string name="price3">8.99</string>
 </resources>
