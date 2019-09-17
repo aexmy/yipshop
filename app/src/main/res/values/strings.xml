@@ -51,4 +51,5 @@
     <string name="little_bunny_squishies">little_bunny_squishies</string>
     <string name="description22">little bunny squishies</string>
     <string name="price">4.99</string>
+    <string name="actual_subtotal">0.00</string>
 </resources>
