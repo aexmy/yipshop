@@ -20,6 +20,8 @@ public class MenuActivity extends AppCompatActivity {
     int counter2 = 0;
     int counter3 = 0;
 
+    double omg;
+
     private TextView price;
     private TextView quantity;
     private TextView subtotal;
@@ -59,8 +61,6 @@ public class MenuActivity extends AppCompatActivity {
 
                 ViewGroup dabigtemp = (ViewGroup) temp.getParent();
                 TextView subtotal_amount = (TextView) dabigtemp.getChildAt(2);
-                String a = subtotal_amount.getText().toString();
-                double aa = Double.parseDouble(a);
 
                 //get ALL of it
                 TextView getFirstSub = (TextView) findViewById(R.id.subtotal);
@@ -75,7 +75,7 @@ public class MenuActivity extends AppCompatActivity {
                 String d3 = getThirdSub.getText().toString();
                 double dd3 = Double.parseDouble(d3);
 
-                double omg = dd1+dd2+dd3;
+                omg = dd1+dd2+dd3;
 
                 displaySubber(omg);
 
@@ -97,26 +97,7 @@ public class MenuActivity extends AppCompatActivity {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
-/**
-            private void displayCheck(double number){
-                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal);
-                String d1 = displaySubtotal.getText().toString();
-                double dd1 = Double.parseDouble(d1);
 
-                TextView displaySubtotal2 = (TextView) findViewById(R.id.subtotal2);
-                String d2 = displaySubtotal2.getText().toString();
-                double dd2 = Double.parseDouble(d2);
-
-                TextView displaySubtotal3 = (TextView) findViewById(R.id.subtotal3);
-                String d3 = displaySubtotal3.getText().toString();
-                double dd3 = Double.parseDouble(d3);
-
-                TextView displayDaRealSub = (TextView) findViewById(subtotal_amount);
-
-                displayCheck.setText("" + String.format("%.2f", dd1+dd2+dd3));
-
-            }
- **/
         });
 
         //cardview 1 decrease
@@ -151,16 +132,24 @@ public class MenuActivity extends AppCompatActivity {
                 //display
                 displaySub(finalSubtotal);
                 Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
-/**
-                //checkout
-                ViewGroup dabigtemp = (ViewGroup) temp.getParent();
-                TextView subtotal_amount = (TextView) dabigtemp.getChildAt(2);
-                String a = subtotal.getText().toString();
-                double aa = Double.parseDouble(s);
-                double finalCheckout = finalSubtotal;
-                displayCheck(finalCheckout);
-                Log.d(LOG_TAGR, "*checkout*" + finalCheckout);
-**/
+
+                //get ALL of it
+                TextView getFirstSub = (TextView) findViewById(R.id.subtotal);
+                String d1 = getFirstSub.getText().toString();
+                double dd1 = Double.parseDouble(d1);
+
+                TextView getSecondSub = (TextView) findViewById(R.id.subtotal2);
+                String d2 = getSecondSub.getText().toString();
+                double dd2 = Double.parseDouble(d2);
+
+                TextView getThirdSub = (TextView) findViewById(R.id.subtotal3);
+                String d3 = getThirdSub.getText().toString();
+                double dd3 = Double.parseDouble(d3);
+
+                omg = dd1+dd2+dd3;
+
+                displaySubber(omg);
+
             }
 
             private void display(int number) {
@@ -170,6 +159,11 @@ public class MenuActivity extends AppCompatActivity {
 
             private void displaySub(double number) {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
+
+            private void displaySubber(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
 
@@ -205,8 +199,8 @@ public class MenuActivity extends AppCompatActivity {
 
                 ViewGroup dabigtemp = (ViewGroup) temp.getParent();
                 TextView subtotal_amount = (TextView) dabigtemp.getChildAt(2);
-                String a = subtotal_amount.getText().toString();
-                double aa = Double.parseDouble(a);
+                //String a = subtotal_amount.getText().toString();
+                //double aa = Double.parseDouble(a);
                 //double finalCheckout = finalSubtotal;
 
                 //get ALL of it
@@ -222,7 +216,7 @@ public class MenuActivity extends AppCompatActivity {
                 String d3 = getThirdSub.getText().toString();
                 double dd3 = Double.parseDouble(d3);
 
-                double omg = dd1+dd2+dd3;
+                omg = dd1+dd2+dd3;
 
                 displaySubber(omg);
 
@@ -280,6 +274,23 @@ public class MenuActivity extends AppCompatActivity {
                 displaySub(finalSubtotal);
                 Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
 
+                //get ALL of it
+                TextView getFirstSub = (TextView) findViewById(R.id.subtotal);
+                String d1 = getFirstSub.getText().toString();
+                double dd1 = Double.parseDouble(d1);
+
+                TextView getSecondSub = (TextView) findViewById(R.id.subtotal2);
+                String d2 = getSecondSub.getText().toString();
+                double dd2 = Double.parseDouble(d2);
+
+                TextView getThirdSub = (TextView) findViewById(R.id.subtotal3);
+                String d3 = getThirdSub.getText().toString();
+                double dd3 = Double.parseDouble(d3);
+
+                omg = dd1+dd2+dd3;
+
+                displaySubber(omg);
+
             }
 
             private void display(int number) {
@@ -289,6 +300,11 @@ public class MenuActivity extends AppCompatActivity {
 
             private void displaySub(double number) {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal2);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
+
+            private void displaySubber(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
         });
@@ -321,6 +337,24 @@ public class MenuActivity extends AppCompatActivity {
                 displaySub(finalSubtotal);
                 Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
 
+                //get ALL of it
+                TextView getFirstSub = (TextView) findViewById(R.id.subtotal);
+                String d1 = getFirstSub.getText().toString();
+                double dd1 = Double.parseDouble(d1);
+
+                TextView getSecondSub = (TextView) findViewById(R.id.subtotal2);
+                String d2 = getSecondSub.getText().toString();
+                double dd2 = Double.parseDouble(d2);
+
+                TextView getThirdSub = (TextView) findViewById(R.id.subtotal3);
+                String d3 = getThirdSub.getText().toString();
+                double dd3 = Double.parseDouble(d3);
+
+                omg = dd1+dd2+dd3;
+
+                displaySubber(omg);
+
+
             }
 
             private void display(int number) {
@@ -330,6 +364,11 @@ public class MenuActivity extends AppCompatActivity {
 
             private void displaySub(double number) {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal3);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
+
+            private void displaySubber(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
 
@@ -368,6 +407,23 @@ public class MenuActivity extends AppCompatActivity {
                 displaySub(finalSubtotal);
                 Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
 
+                //get ALL of it
+                TextView getFirstSub = (TextView) findViewById(R.id.subtotal);
+                String d1 = getFirstSub.getText().toString();
+                double dd1 = Double.parseDouble(d1);
+
+                TextView getSecondSub = (TextView) findViewById(R.id.subtotal2);
+                String d2 = getSecondSub.getText().toString();
+                double dd2 = Double.parseDouble(d2);
+
+                TextView getThirdSub = (TextView) findViewById(R.id.subtotal3);
+                String d3 = getThirdSub.getText().toString();
+                double dd3 = Double.parseDouble(d3);
+
+                omg = dd1+dd2+dd3;
+
+                displaySubber(omg);
+
             }
 
             private void display(int number) {
@@ -379,15 +435,22 @@ public class MenuActivity extends AppCompatActivity {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal3);
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
+
+            private void displaySubber(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
         });
 
     }
 
     public void launchCheckoutActivity(View view) {
         Intent intent = new Intent(this, CheckoutActivity.class);
+        intent.putExtra("helpidkwhatimdoing", omg);
         startActivity(intent);
 
         Log.d(LOG_TAG, "Button clicked!");
+        Log.d(LOG_TAG, "!" + omg);
     }
 }
 
