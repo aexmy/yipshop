@@ -20,6 +20,40 @@
         android:textSize="30sp"
         android:textStyle="normal|bold|italic" />
 
+    <TextView
+        android:id="@+id/dollarsign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/subtotal_amount"
+        android:layout_alignLeft="@+id/subtotal_amount"
+        android:layout_alignTop="@+id/subtotal_amount"
+        android:layout_alignBottom="@+id/subtotal_amount"
+        android:gravity="center"
+        android:text="@string/dollarsign"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/subtotal_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scrollview_menu"
+        android:layout_alignStart="@+id/yipshop_title"
+        android:layout_alignLeft="@+id/yipshop_title"
+        android:layout_alignTop="@+id/yipshop_title"
+        android:layout_alignEnd="@+id/yipshop_title"
+        android:layout_alignRight="@+id/yipshop_title"
+        android:layout_marginStart="299dp"
+        android:layout_marginLeft="299dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="@string/checkout_amount"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
+
     <ScrollView
         android:id="@+id/scrollview_menu"
         android:layout_width="match_parent"

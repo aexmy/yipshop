@@ -17,6 +17,8 @@ public class MenuActivity extends AppCompatActivity {
     private static final String LOG_TAG = CheckoutActivity.class.getSimpleName();
     private static final String LOG_TAGR = MenuActivity.class.getSimpleName();
     int counter = 0;
+    int counter2 = 0;
+    int counter3 = 0;
 
     private TextView price;
     private TextView quantity;
@@ -27,6 +29,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        //cardview 1 add
         final Button button_increase = findViewById(R.id.add_button);
         button_increase.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -54,6 +57,30 @@ public class MenuActivity extends AppCompatActivity {
                 displaySub(finalSubtotal);
                 Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
 
+                ViewGroup dabigtemp = (ViewGroup) temp.getParent();
+                TextView subtotal_amount = (TextView) dabigtemp.getChildAt(2);
+                String a = subtotal_amount.getText().toString();
+                double aa = Double.parseDouble(a);
+
+                //get ALL of it
+                TextView getFirstSub = (TextView) findViewById(R.id.subtotal);
+                String d1 = getFirstSub.getText().toString();
+                double dd1 = Double.parseDouble(d1);
+
+                TextView getSecondSub = (TextView) findViewById(R.id.subtotal2);
+                String d2 = getSecondSub.getText().toString();
+                double dd2 = Double.parseDouble(d2);
+
+                TextView getThirdSub = (TextView) findViewById(R.id.subtotal3);
+                String d3 = getThirdSub.getText().toString();
+                double dd3 = Double.parseDouble(d3);
+
+                double omg = dd1+dd2+dd3;
+
+                displaySubber(omg);
+
+                Log.d(LOG_TAGR, "*checkout*" + (omg));
+
             }
 
             private void display(int number) {
@@ -63,11 +90,36 @@ public class MenuActivity extends AppCompatActivity {
 
             private void displaySub(double number) {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal);
-                displaySubtotal.setText("" + number);
+                displaySubtotal.setText("" + String.format("%.2f", number));
             }
 
+            private void displaySubber(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
+/**
+            private void displayCheck(double number){
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal);
+                String d1 = displaySubtotal.getText().toString();
+                double dd1 = Double.parseDouble(d1);
+
+                TextView displaySubtotal2 = (TextView) findViewById(R.id.subtotal2);
+                String d2 = displaySubtotal2.getText().toString();
+                double dd2 = Double.parseDouble(d2);
+
+                TextView displaySubtotal3 = (TextView) findViewById(R.id.subtotal3);
+                String d3 = displaySubtotal3.getText().toString();
+                double dd3 = Double.parseDouble(d3);
+
+                TextView displayDaRealSub = (TextView) findViewById(subtotal_amount);
+
+                displayCheck.setText("" + String.format("%.2f", dd1+dd2+dd3));
+
+            }
+ **/
         });
 
+        //cardview 1 decrease
         final Button button_decrease = findViewById(R.id.minus_button);
         button_decrease.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -84,7 +136,7 @@ public class MenuActivity extends AppCompatActivity {
                 TextView quantity = (TextView) temp.getChildAt(10);
                 String q = quantity.getText().toString();
                 int qq = Integer.parseInt(q);
-                if(counter > 0) {
+                if (counter > 0) {
                     counter = counter - 1;
                 }
                 //display
@@ -99,7 +151,16 @@ public class MenuActivity extends AppCompatActivity {
                 //display
                 displaySub(finalSubtotal);
                 Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
-
+/**
+                //checkout
+                ViewGroup dabigtemp = (ViewGroup) temp.getParent();
+                TextView subtotal_amount = (TextView) dabigtemp.getChildAt(2);
+                String a = subtotal.getText().toString();
+                double aa = Double.parseDouble(s);
+                double finalCheckout = finalSubtotal;
+                displayCheck(finalCheckout);
+                Log.d(LOG_TAGR, "*checkout*" + finalCheckout);
+**/
             }
 
             private void display(int number) {
@@ -109,9 +170,217 @@ public class MenuActivity extends AppCompatActivity {
 
             private void displaySub(double number) {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal);
-                displaySubtotal.setText("" + number);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
+
+        });
+
+        //cardview 2 add
+        final Button button_increase2 = findViewById(R.id.add_button2);
+        button_increase2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ViewGroup temp = (ViewGroup) v.getParent();
+
+                //get the price, child 3
+                TextView price = (TextView) temp.getChildAt(3);
+                String p = price.getText().toString();
+                double pp = Double.parseDouble(p);
+                Log.d(LOG_TAGR, "*price*" + pp);
+
+                //get the quantity, child 10
+                TextView quantity = (TextView) temp.getChildAt(10);
+                String q = quantity.getText().toString();
+                int qq = Integer.parseInt(q);
+                counter2 = counter2 + 1;
+                display(counter2);
+                Log.d(LOG_TAGR, "*quantity*" + counter2);
+
+                //get the subtotal, child 11
+                TextView subtotal = (TextView) temp.getChildAt(11);
+                String s = subtotal.getText().toString();
+                double ss = Double.parseDouble(s);
+                double finalSubtotal = counter2 * pp;
+                displaySub(finalSubtotal);
+                Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
+
+                ViewGroup dabigtemp = (ViewGroup) temp.getParent();
+                TextView subtotal_amount = (TextView) dabigtemp.getChildAt(2);
+                String a = subtotal_amount.getText().toString();
+                double aa = Double.parseDouble(a);
+                //double finalCheckout = finalSubtotal;
+
+                //get ALL of it
+                TextView getFirstSub = (TextView) findViewById(R.id.subtotal);
+                String d1 = getFirstSub.getText().toString();
+                double dd1 = Double.parseDouble(d1);
+
+                TextView getSecondSub = (TextView) findViewById(R.id.subtotal2);
+                String d2 = getSecondSub.getText().toString();
+                double dd2 = Double.parseDouble(d2);
+
+                TextView getThirdSub = (TextView) findViewById(R.id.subtotal3);
+                String d3 = getThirdSub.getText().toString();
+                double dd3 = Double.parseDouble(d3);
+
+                double omg = dd1+dd2+dd3;
+
+                displaySubber(omg);
+
+                Log.d(LOG_TAGR, "*checkout*" + (omg));
+
+            }
+
+            private void display(int number) {
+                TextView displayInteger = (TextView) findViewById(R.id.integer2);
+                displayInteger.setText("" + number);
+            }
+
+            private void displaySub(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal2);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
+
+            private void displaySubber(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
+
+        });
+
+        //cardview 2 decrease
+        final Button button_decrease2 = findViewById(R.id.minus_button2);
+        button_decrease2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ViewGroup temp = (ViewGroup) v.getParent();
+
+                //get the price, child 3
+                TextView price = (TextView) temp.getChildAt(3);
+                String p = price.getText().toString();
+                double pp = Double.parseDouble(p);
+                //display
+                Log.d(LOG_TAGR, "*price*" + pp);
+
+                //get the quantity, child 10
+                TextView quantity = (TextView) temp.getChildAt(10);
+                String q = quantity.getText().toString();
+                int qq = Integer.parseInt(q);
+                if (counter2 > 0) {
+                    counter2 = counter2 - 1;
+                }
+                //display
+                display(counter2);
+                Log.d(LOG_TAGR, "*quantity*" + qq);
+
+                //get the subtotal, child 11
+                TextView subtotal = (TextView) temp.getChildAt(11);
+                String s = subtotal.getText().toString();
+                double ss = Double.parseDouble(s);
+                double finalSubtotal = counter2 * pp;
+                //display
+                displaySub(finalSubtotal);
+                Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
+
+            }
+
+            private void display(int number) {
+                TextView displayInteger = (TextView) findViewById(R.id.integer2);
+                displayInteger.setText("" + number);
+            }
+
+            private void displaySub(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal2);
+                displaySubtotal.setText("" + String.format("%.2f", number));
             }
         });
+
+        //cardview 3 add
+        final Button button_increase3 = findViewById(R.id.add_button3);
+        button_increase3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ViewGroup temp = (ViewGroup) v.getParent();
+
+                //get the price, child 3
+                TextView price = (TextView) temp.getChildAt(3);
+                String p = price.getText().toString();
+                double pp = Double.parseDouble(p);
+                Log.d(LOG_TAGR, "*price*" + pp);
+
+                //get the quantity, child 10
+                TextView quantity = (TextView) temp.getChildAt(10);
+                String q = quantity.getText().toString();
+                int qq = Integer.parseInt(q);
+                counter3 = counter3 + 1;
+                display(counter3);
+                Log.d(LOG_TAGR, "*quantity*" + counter3);
+
+                //get the subtotal, child 11
+                TextView subtotal = (TextView) temp.getChildAt(11);
+                String s = subtotal.getText().toString();
+                double ss = Double.parseDouble(s);
+                double finalSubtotal = counter3 * pp;
+                displaySub(finalSubtotal);
+                Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
+
+            }
+
+            private void display(int number) {
+                TextView displayInteger = (TextView) findViewById(R.id.integer3);
+                displayInteger.setText("" + number);
+            }
+
+            private void displaySub(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal3);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
+
+        });
+
+        //cardview 3 decrease
+        final Button button_decrease3 = findViewById(R.id.minus_button3);
+        button_decrease3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ViewGroup temp = (ViewGroup) v.getParent();
+
+                //get the price, child 3
+                TextView price = (TextView) temp.getChildAt(3);
+                String p = price.getText().toString();
+                double pp = Double.parseDouble(p);
+                //display
+                Log.d(LOG_TAGR, "*price*" + pp);
+
+                //get the quantity, child 10
+                TextView quantity = (TextView) temp.getChildAt(10);
+                String q = quantity.getText().toString();
+                int qq = Integer.parseInt(q);
+                if (counter3 > 0) {
+                    counter3 = counter3 - 1;
+                }
+                //display
+                display(counter3);
+                Log.d(LOG_TAGR, "*quantity*" + qq);
+
+                //get the subtotal, child 11
+                TextView subtotal = (TextView) temp.getChildAt(11);
+                String s = subtotal.getText().toString();
+                double ss = Double.parseDouble(s);
+                double finalSubtotal = counter3 * pp;
+                //display
+                displaySub(finalSubtotal);
+                Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
+
+            }
+
+            private void display(int number) {
+                TextView displayInteger = (TextView) findViewById(R.id.integer3);
+                displayInteger.setText("" + number);
+            }
+
+            private void displaySub(double number) {
+                TextView displaySubtotal = (TextView) findViewById(R.id.subtotal3);
+                displaySubtotal.setText("" + String.format("%.2f", number));
+            }
+        });
+
     }
 
     public void launchCheckoutActivity(View view) {
@@ -121,96 +390,4 @@ public class MenuActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "Button clicked!");
     }
 }
-/**
-            public void increase(View view){
-                @Override
-                public void onClick(View v){
-
-                }
-            }
-
-            private TextView getPriceFromButton(View view){
-                ViewGroup temp = (ViewGroup)view.getParent();
-                TextView price = (TextView)temp.getChildAt(3);
-                price.setText(""+price.toString());
-                Log.d(LOG_TAGR, "*getprice*"+price);
-                return price;
-
-            }
-
-            private TextView getSubtotalFromButton(View view){
-                ViewGroup temp = (ViewGroup)view.getParent();
-                TextView subtotal = (TextView)temp.getChildAt(11);
-                subtotal.setText(""+subtotal.toString());
-                Log.d(LOG_TAGR, "*getsubtotal*"+subtotal);
-                return subtotal;
-            }
-
-            private TextView getQuantityFromButton(View view){
-                ViewGroup temp = (ViewGroup)view.getParent();
-                TextView quantity = (TextView)temp.getChildAt(10);
-                quantity.setText(""+quantity.toString());
-                Log.d(LOG_TAGR, "*getquantity*"+quantity);
-                return quantity;
-            }
-
-        });
-
-    }
-
-    public void increase(View view){
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter = counter + 1;
-                display(counter);
-            }
-        });
-    }
- **/
-
-/**
-    public void button_id(View view){
-        //get the parent view which is the constraint layout
-        ViewGroup temp = (ViewGroup)view.getParent();
-
-        //get the price, child 3, which is a textview
-        this.price = (TextView)temp.getChildAt(3);
-        Log.d(LOG_TAGR, "*price*"+price);//*how do i convert view to double?*
-
-        //get the quantity, child 10
-        this.quantity = (TextView)temp.getChildAt(10);
-        Log.d(LOG_TAGR, "*quantity*"+quantity);//*how do i convert view to int?*
-
-        //get the subtotal, child 11
-        this.subtotal = (TextView)temp.getChildAt(11);
-        Log.d(LOG_TAGR, "*subtotal*"+subtotal);
-    }
-
-    private TextView getPriceFromButton(View view){
-        ViewGroup temp = (ViewGroup)view.getParent();
-        this.price = (TextView)temp.getChildAt(3);
-        this.price.setText(""+price.toString());
-        Log.d(LOG_TAGR, "*getprice*"+price);
-        return price;
-
-    }
-
-    private TextView getSubtotalFromButton(View view){
-        ViewGroup temp = (ViewGroup)view.getParent();
-        this.subtotal = (TextView)temp.getChildAt(11);
-        this.subtotal.setText(""+subtotal.toString());
-        Log.d(LOG_TAGR, "*getsubtotal*"+subtotal);
-        return subtotal;
-    }
-
-    private TextView getQuantityFromButton(View view){
-        ViewGroup temp = (ViewGroup)view.getParent();
-        this.quantity = (TextView)temp.getChildAt(10);
-
-        this.quantity.setText(""+quantity.toString());
-        Log.d(LOG_TAGR, "*getquantity*"+quantity);
-        return quantity;
-    }
-**/
 
