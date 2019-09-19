@@ -20,7 +20,7 @@ public class MenuActivity extends AppCompatActivity {
     int counter2 = 0;
     int counter3 = 0;
 
-    double omg;
+    double transfer;
 
     private TextView price;
     private TextView quantity;
@@ -31,7 +31,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        //cardview 1 add
+
         final Button button_increase = findViewById(R.id.add_button);
         button_increase.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -75,11 +75,11 @@ public class MenuActivity extends AppCompatActivity {
                 String d3 = getThirdSub.getText().toString();
                 double dd3 = Double.parseDouble(d3);
 
-                omg = dd1+dd2+dd3;
+                transfer = dd1+dd2+dd3;
 
-                displaySubber(omg);
+                displaySubber(transfer);
 
-                Log.d(LOG_TAGR, "*checkout*" + (omg));
+                Log.d(LOG_TAGR, "*checkout*" + (transfer));
 
             }
 
@@ -146,9 +146,9 @@ public class MenuActivity extends AppCompatActivity {
                 String d3 = getThirdSub.getText().toString();
                 double dd3 = Double.parseDouble(d3);
 
-                omg = dd1+dd2+dd3;
+                transfer = dd1+dd2+dd3;
 
-                displaySubber(omg);
+                displaySubber(transfer);
 
             }
 
@@ -199,9 +199,6 @@ public class MenuActivity extends AppCompatActivity {
 
                 ViewGroup dabigtemp = (ViewGroup) temp.getParent();
                 TextView subtotal_amount = (TextView) dabigtemp.getChildAt(2);
-                //String a = subtotal_amount.getText().toString();
-                //double aa = Double.parseDouble(a);
-                //double finalCheckout = finalSubtotal;
 
                 //get ALL of it
                 TextView getFirstSub = (TextView) findViewById(R.id.subtotal);
@@ -216,11 +213,11 @@ public class MenuActivity extends AppCompatActivity {
                 String d3 = getThirdSub.getText().toString();
                 double dd3 = Double.parseDouble(d3);
 
-                omg = dd1+dd2+dd3;
+                transfer = dd1 + dd2 + dd3;
 
-                displaySubber(omg);
+                displaySubber(transfer);
 
-                Log.d(LOG_TAGR, "*checkout*" + (omg));
+                Log.d(LOG_TAGR, "*checkout*" + (transfer));
 
             }
 
@@ -287,9 +284,9 @@ public class MenuActivity extends AppCompatActivity {
                 String d3 = getThirdSub.getText().toString();
                 double dd3 = Double.parseDouble(d3);
 
-                omg = dd1+dd2+dd3;
+                transfer = dd1 + dd2 + dd3;
 
-                displaySubber(omg);
+                displaySubber(transfer);
 
             }
 
@@ -350,9 +347,9 @@ public class MenuActivity extends AppCompatActivity {
                 String d3 = getThirdSub.getText().toString();
                 double dd3 = Double.parseDouble(d3);
 
-                omg = dd1+dd2+dd3;
+                transfer = dd1 + dd2 + dd3;
 
-                displaySubber(omg);
+                displaySubber(transfer);
 
 
             }
@@ -420,9 +417,9 @@ public class MenuActivity extends AppCompatActivity {
                 String d3 = getThirdSub.getText().toString();
                 double dd3 = Double.parseDouble(d3);
 
-                omg = dd1+dd2+dd3;
+                transfer = dd1 + dd2 + dd3;
 
-                displaySubber(omg);
+                displaySubber(transfer);
 
             }
 
@@ -446,11 +443,14 @@ public class MenuActivity extends AppCompatActivity {
 
     public void launchCheckoutActivity(View view) {
         Intent intent = new Intent(this, CheckoutActivity.class);
-        intent.putExtra("helpidkwhatimdoing", omg);
+
+        ViewGroup layout_view = (ViewGroup) view.getParent();
+        TextView checkout_view = (TextView) layout_view.getChildAt(2);
+        String message = checkout_view.getText().toString();
+        intent.putExtra("subtotal", message);
         startActivity(intent);
 
         Log.d(LOG_TAG, "Button clicked!");
-        Log.d(LOG_TAG, "!" + omg);
+        Log.d(LOG_TAG, "!" + message);
     }
 }
-
