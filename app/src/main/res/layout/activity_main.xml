@@ -69,15 +69,17 @@
         android:id="@+id/instructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center|center_horizontal|center_vertical"
         android:text="@string/instructions"
-        android:textColor="#80D8FF"
+        android:textColor="#84FFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="@+id/button_start"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="@+id/button_start"
         app:layout_constraintTop_toBottomOf="@+id/button_start"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

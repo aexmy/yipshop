@@ -30,7 +30,7 @@ public class CheckoutActivity extends AppCompatActivity {
             String j =(String) bundle.get("subtotal");
             theSubtotal = Double.parseDouble(j);
             subbie.setText("" + String.format("%.2f", theSubtotal));
-            Log.d(LOG_TAG, "!subbie" + theSubtotal);
+            Log.d(LOG_TAG, "!subtotal" + theSubtotal);
         }
 
         TextView tps = (TextView)findViewById(R.id.tpstps);

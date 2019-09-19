@@ -2,7 +2,6 @@
     <string name="app_name">YipShop</string>
     <string name="show_welcome">welcome to the yip shop</string>
     <string name="button_start">start shopping</string>
-    <string name="instructions">instructions</string>
     <string name="first">first</string>
     <string name="second">second</string>
     <string name="third">third</string>
@@ -14,7 +13,6 @@
     <string name="tvq">tvq</string>
     <string name="total">total</string>
     <string name="thank_you_for_using_my_app">thank you for using my app!</string>
-    <string name="proceed_to_checkout">proceed_to_checkout</string>
     <string name="proceed_checkout">proceed to checkout</string>
     <string name="title1">title1</string>
     <string name="dollar_sign">$</string>
@@ -32,8 +30,6 @@
     <string name="first_title">pencil pouch</string>
     <string name="description2">cute little squishies</string>
     <string name="description3">cute little backpacks</string>
-    <string name="third_title">kawaii backpacks</string>
-    <string name="cute_backpacks">cute backpacks</string>
     <string name="squishies">squishies</string>
     <string name="pencil_pouches">pencil pouches</string>
     <string name="flamingo_pencil_pouches">flamingo pencil pouches</string>
@@ -41,10 +37,8 @@
     <string name="cute_shoulder_backpacks">cute shoulder backpacks</string>
     <string name="backpacks">backpacks</string>
     <string name="qty">qty.</string>
-    <string name="bunny_squishies">bunny squishies</string>
     <string name="little_shoulder_bags">little shoulder bags</string>
     <string name="pink_flamingo_pouches">pink flamingo pouches</string>
-    <string name="little_bunny_squishies">little_bunny_squishies</string>
     <string name="description22">little bunny squishies</string>
     <string name="_0">0</string>
     <string name="price2">1.99</string>
@@ -57,4 +51,6 @@
     <string name="actual_tps">TextView</string>
     <string name="actual_tvq">TextView</string>
     <string name="actual_total">TextView</string>
+    <string name="instructions">click the start shopping button to get started!</string>
+    <string name="dollarsigns">$</string>
 </resources>

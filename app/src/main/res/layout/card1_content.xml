@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.225" />
 
     <Button
-        android:id="@+id/add_button"
+        android:id="@+id/add_button1"
         android:layout_width="43dp"
         android:layout_height="36dp"
         android:layout_marginStart="160dp"
@@ -110,13 +110,13 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
         android:textStyle="normal|bold"
-        app:layout_constraintBottom_toBottomOf="@+id/minus_button"
+        app:layout_constraintBottom_toBottomOf="@+id/minus_button1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/minus_button"
+        app:layout_constraintTop_toTopOf="@+id/minus_button1"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/minus_button"
+        android:id="@+id/minus_button1"
         android:layout_width="42dp"
         android:layout_height="36dp"
         android:layout_marginTop="4dp"
@@ -167,7 +167,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.282"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_button" />
+        app:layout_constraintTop_toBottomOf="@+id/add_button1" />
 
     <TextView
         android:id="@+id/dollarsign2"
@@ -186,7 +186,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.587"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/minus_button"
+        app:layout_constraintTop_toBottomOf="@+id/minus_button1"
         app:layout_constraintVertical_bias="0.003" />
 
     <TextView
