@@ -10,7 +10,7 @@ First, start out on [this](https://github.com/aexmy/yipshop) website.
 Next, click on the green button that says **Clone or download**. 
 Copy the [link](https://github.com/aexmy/yipshop) and open Git Bash. 
 Change the directory to paste the repository to Android Studio Projects. 
-When ready, type in git clone [link](https://github.com/aexmy/yipshop) and press Enter. 
+When ready, type in "git clone [link](https://github.com/aexmy/yipshop)" and press "Enter". 
 
 You should now be able to open the project on Android Studio.
 
