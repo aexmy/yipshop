@@ -24,7 +24,7 @@ You should now be able to open the project on Android Studio.
 
 To run automated tests for this system, wait until the build is completed successfully. Next, click "Run app" to get the system started. Make sure to create or select a virtual device. This project should be able to run on most devices since its API level is API 15: Android 4.0.3 (IceCreamSandwich), but I usually run it on the Nexus 6P API 28 2.
 
-Next, you will be shown an emulator with the welcome screen. To get started, press on the "Start shopping" button. The following page shows 3 articles which you can add (+) or remove (-). On the top right of the screen, you can see the subtotal. Next, you can proceed to the checkout screen by pressing on the "Proceed to checkout" button. The screen will show the subtotal, the Quebec tax values (TPS and TVQ) as well as the total amount to be paid.
+Next, you will be shown an emulator with the welcome screen. To get started, press on the "Start shopping" button. The following page shows 3 articles which you can add (+) or remove (-). On the top right of the screen, you can see the subtotal. Next, you can proceed to the checkout screen by pressing on the "Proceed to checkout" button. The screen will show the subtotal, the Quebec tax values (TPS and TVQ) as well as the total amount to be paid. Up navigation has not been implemented.
 
 ## Authors
 
