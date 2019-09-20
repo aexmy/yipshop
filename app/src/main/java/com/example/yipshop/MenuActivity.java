@@ -27,25 +27,32 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-
+        //To read the user's interaction with our FIRST item's add button, enable an onClickListener.
         final Button button_increase = findViewById(R.id.add_button1);
         button_increase.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                //Firstly, we get the parent of the first CardView, which returns the ConstraintLayout
                 ViewGroup temp = (ViewGroup) v.getParent();
 
+                //Next, navigate the tree to get the price of the first item
                 TextView price = (TextView) temp.getChildAt(3);
+                //Now, we parse it to a double value
                 String p = price.getText().toString();
                 double pp = Double.parseDouble(p);
                 Log.d(LOG_TAGR, "*price*" + pp);
 
+                //Next, we set a counter that counts the amount of times the user clicks the button
                 counter = counter + 1;
+                //Now, we display the amount of clicks in the "Quantity" view
                 display(counter);
                 Log.d(LOG_TAGR, "*quantity*" + counter);
 
+                //Next, we perform the calculation of the subtotal by multiplying the counter (amount of clicks) by the price.
                 double finalSubtotal = counter * pp;
                 displaySub(finalSubtotal);
                 Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
 
+                //The following steps are to get the total subtotal of all 3 items.
                 TextView getFirstSub = (TextView) findViewById(R.id.subtotal);
                 String d1 = getFirstSub.getText().toString();
                 double dd1 = Double.parseDouble(d1);
@@ -58,31 +65,35 @@ public class MenuActivity extends AppCompatActivity {
                 String d3 = getThirdSub.getText().toString();
                 double dd3 = Double.parseDouble(d3);
 
+                //Add the subtotal of all 3 items
                 transfer = dd1+dd2+dd3;
 
+                //Display it on the upper right corner
                 displaySubber(transfer);
 
                 Log.d(LOG_TAGR, "*checkout*" + (transfer));
-
             }
 
+            //Display method for the quantity
             private void display(int number) {
                 TextView displayInteger = (TextView) findViewById(R.id.integer);
                 displayInteger.setText("" + number);
             }
 
+            //Display method for the subtotal for item number 1
             private void displaySub(double number) {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal);
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
 
+            //Display method for the subtotal all 3 items
             private void displaySubber(double number) {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
-
         });
 
+        //Repeat all the steps, but this time to decrease the quantity of the FIRST item
         final Button button_decrease = findViewById(R.id.minus_button1);
         button_decrease.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -103,8 +114,6 @@ public class MenuActivity extends AppCompatActivity {
                 Log.d(LOG_TAGR, "*quantity*" + qq);
 
                 TextView subtotal = (TextView) temp.getChildAt(11);
-                String s = subtotal.getText().toString();
-                double ss = Double.parseDouble(s);
                 double finalSubtotal = counter * pp;
                 displaySub(finalSubtotal);
                 Log.d(LOG_TAGR, "*subtotal*" + finalSubtotal);
@@ -124,7 +133,6 @@ public class MenuActivity extends AppCompatActivity {
                 transfer = dd1 + dd2 + dd3;
 
                 displaySubber(transfer);
-
             }
 
             private void display(int number) {
@@ -144,6 +152,7 @@ public class MenuActivity extends AppCompatActivity {
 
         });
 
+        //Repeat all the steps, but this time to increase the quantity of the SECOND item
         final Button button_increase2 = findViewById(R.id.add_button2);
         button_increase2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -179,7 +188,6 @@ public class MenuActivity extends AppCompatActivity {
                 displaySubber(transfer);
 
                 Log.d(LOG_TAGR, "*checkout*" + (transfer));
-
             }
 
             private void display(int number) {
@@ -196,9 +204,9 @@ public class MenuActivity extends AppCompatActivity {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
-
         });
 
+        //Repeat all the steps, but this time to decrease the quantity of the SECOND item
         final Button button_decrease2 = findViewById(R.id.minus_button2);
         button_decrease2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -237,7 +245,6 @@ public class MenuActivity extends AppCompatActivity {
                 transfer = dd1 + dd2 + dd3;
 
                 displaySubber(transfer);
-
             }
 
             private void display(int number) {
@@ -256,6 +263,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        //Repeat all the steps, but this time to increase the quantity of the 3rd item
         final Button button_increase3 = findViewById(R.id.add_button3);
         button_increase3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -289,8 +297,6 @@ public class MenuActivity extends AppCompatActivity {
                 transfer = dd1 + dd2 + dd3;
 
                 displaySubber(transfer);
-
-
             }
 
             private void display(int number) {
@@ -307,9 +313,9 @@ public class MenuActivity extends AppCompatActivity {
                 TextView displaySubtotal = (TextView) findViewById(R.id.subtotal_amount);
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
-
         });
 
+        //Repeat all the steps, but this time to decrease the quantity of the 3rd item
         final Button button_decrease3 = findViewById(R.id.minus_button3);
         button_decrease3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -348,7 +354,6 @@ public class MenuActivity extends AppCompatActivity {
                 transfer = dd1 + dd2 + dd3;
 
                 displaySubber(transfer);
-
             }
 
             private void display(int number) {
@@ -366,12 +371,13 @@ public class MenuActivity extends AppCompatActivity {
                 displaySubtotal.setText("" + String.format("%.2f", number));
             }
         });
-
     }
 
+    //This launches the CheckoutActivity.java, the screen that enables the user to see the subtotal, the TPS, the TVQ and the total amount to be paid
     public void launchCheckoutActivity(View view) {
         Intent intent = new Intent(this, CheckoutActivity.class);
 
+        //This transfers the value of the subtotal from the MenuActivity.java to the CheckoutActivity.java screen
         ViewGroup layout_view = (ViewGroup) view.getParent();
         TextView checkout_view = (TextView) layout_view.getChildAt(2);
         String message = checkout_view.getText().toString();

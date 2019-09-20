@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    //This launches the MenuActivity.java, the screen that enables the user to perform a simple shopping task
     public void launchMenuActivity(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
