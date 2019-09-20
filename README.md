@@ -18,4 +18,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Thank you to Tassia Camoes-Araujo for the help provided during this project.
 
-In the CheckoutActivity.java, credit goes to [ReemaRazdan](https://stackoverflow.com/users/2194996/reemarazdan) and [Sawny](https://stackoverflow.com/users/996028/sawny) on StackOverflow. I was inspired by them on how to use the putExtra() method as well as the getExtra().
+In the CheckoutActivity.java, credit goes to [ReemaRazdan](https://stackoverflow.com/users/2194996/reemarazdan) and [Sawny](https://stackoverflow.com/users/996028/sawny) on [StackOverflow](https://stackoverflow.com/questions/5265913/how-to-use-putextra-and-getextra-for-string-data). I was inspired by them on how to use the putExtra() method as well as the getExtra().
