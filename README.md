@@ -1,3 +1,6 @@
+
+https://user-images.githubusercontent.com/47752075/115660936-b369fc00-a30a-11eb-8beb-0a1e32df606a.mov
+
 # A Shopping App
 
 An Android application that guides the user through a simple shopping task. The first screen displays a welcome message, and a button that  takes the user to a second screen where a list of 3 items are presented in a card-based design. The user can add and remove items, and proceed to the checkout screen by pressing on another button when ready to purchase items. On the checkout screen, the user will be able to see the subtotal, the Quebec tax values (TPS and TVQ) and the total amount to be paid.
