@@ -12,11 +12,11 @@ Install Android SDK and Android Studio, and Git.
 
 ### Installing
 
-First, start out on [this](https://github.com/aexmy/yipshop) website. 
+First, start out on [this](https://github.com/amyyip-ca/yipshop) website. 
 Next, click on the green button that says "Clone or download". 
 Copy the [link](https://github.com/aexmy/yipshop) and open Git Bash. 
 Change the directory to paste the repository to Android Studio Projects. 
-When ready, type in "git clone [link](https://github.com/aexmy/yipshop)" and press "Enter". 
+When ready, type in "git clone [link](https://github.com/amyyip-ca/yipshop)" and press "Enter". 
 
 You should now be able to open the project on Android Studio.
 
@@ -28,7 +28,7 @@ Next, you will be shown an emulator with the welcome screen. To get started, pre
 
 ## Authors
 
-* **Amy Yip** - *Initial work* - [aexmy](https://github.com/aexmy)
+* **Amy Yip** - *Initial work* - [amyyip-ca](https://github.com/amyyip-ca)
 
 ## License
 
